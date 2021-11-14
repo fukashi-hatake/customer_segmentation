@@ -72,3 +72,60 @@ Which variable to use depends on
 * Usually a combination of these variables are used 
 * Remember the goal of segmentation! 
 * To conduct a proper segmentation you need data and research! 
+
+--- 
+
+### Targeting 
+- Next logical step after segmentation 
+- Evaluating each segments **attractiveness** 
+- Selecting one or more to enter 
+- The goal is to select the segment with highest profit potential 
+
+#### Segment Size 
+- The number of customers in the segment **
+- Total Spending Potential (SPI) **
+
+#### Potential Growth 
+
+#### Ability and Cost of Reach 
+- How difficult and costly is to reach the people in that segment? 
+
+#### Competition and Customer Satisfaction 
+- How intense is the current competition (Supply) 
+- If it is an attractive segment, it might have already been targeted by competition 
+- Customer satisfaction with current offereings (**Low satisfaction is opportunity**) 
+- Niche marketing is a good strategy in hyper competitive markets 
+
+#### Barriers to Entry 
+- Heavy investment? 
+- Easy to enter? 
+
+
+#### Mass Markets & Niche Markets 
+
+##### Mass Markets 
+- Large Market 
+- General products (focus is on product rather than customer) 
+- Communicating with the largest possible group of audience 
+- TV commercial or a massive flyer printing campaign 
+- Heavy Cost 
+
+##### Niche Markets 
+- Smaller markets 
+- Requires far less money 
+- More focused and targeted 
+- Focus is on the customers and their specific needs 
+- E.g., pen for left handed people (mass marketing, pen for everyone)
+
+
+#### Segmentation Needs DATA 
+_**Primary Data (Research)**_
+- Descriptive Analysis (Observation, expert interviews, focus groups, etc) 
+- Surveys 
+- Cluster Analysis 
+- Conjoint Analysis 
+- etc 
+
+_**Secondary Data (Research)**_
+- Professonal databases that are available: Census, GFK MRI, Esri Business Analyst Online, etc. 
+
