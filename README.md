@@ -1,6 +1,6 @@
 ## Marketing Insights 
 by Firuz Juraev (Ph.D candidate)
----
+
 
 ### Customer Segmentation 
 
@@ -37,5 +37,38 @@ Not knowing the asnwer will result in:
 - Failure in responding to market needs 
 - You can not be everything to everyone 
 
+#### Example: [Iridium Failure](http://content.time.com/time/specials/packages/article/0,28804,1898610_1898625_1898640,00.html) 
+- Filed for bankruptcy in 1999, after the company had spent $5 billion. They produced a satellite phone that worked all over the world. The handsets were clunky, weighed about 1 lb. The handset cost $3,000 and talk time was as much as $5 per minute. 
 
 
+#### Characteristics of useful segmentation 
+- **Identifiable** - That is, we have to kind of understand and be able to identify who is who and who is in our segment. 
+- **Substantial** - the segment should be large enough to be cost effective and be profitable (ex: small rural towns are not substantial for Walmart but large enough for Dollar stores). 
+- **Accessibile** - So we need to have segments that we can access them because then we need to kind of distribute our products later to those segments and also use communication channels to to make them aware of the product and use our advertising strategies stable should be the other characteristic, meaning that each segment 
+- **Stable** - Segments should be stable over long enough period of time (for creating long term marketing strategies)
+- **Differntiable** - Segments should be respond differently to marketing programs (segmenting customers by gender for pen selling is not good diffentiable becuase there is not big difference in usage of pen between women and men). 
+- **Actionable** - We want to have a segment that you can make an action on, meaning that we want to develop our marketing strategies and and products around that.
+
+#### Major Segmentation Variables for Customer Markets 
+- **Geographic** - Country, region, city, urban/rural, different climates
+- **Demographics** - Age, income, gender, generation, martial status, ethnicity, occupation, education 
+- **Psychographics** - Lifestyle, personality, activities, interests, values 
+- **Behavioral** - Usage rate, loyalty, product knowledge, involvement, purchase occasion, buying stage
+- **Benefits Sought** - Convenience, values, safety 
+
+Examples: 
+- **Geographic**: McDonalds in India does not serve meats becuase it's country that in their culture (e.g., vegetarian burgers). 
+- **Demographics**:Rasor companies, they have reasons for men and women.  
+- **Psychographics**: Intangible customer characteristics (expensive and time consuming) 
+- **Behavioral**: like tobacco users, for example, in the tobacco industry, they use that like heavy smokers. They consume most of of the cigarettes and they try to segment their market and product advertising 
+- **Benefits Sought**:  Laptop, we can have different benefits that we are looking after. So the benefits of these products are different. 
+
+#### Important Points 
+Which variable to use depends on 
+- Type of industry 
+- Type of product and market 
+- Availability of information 
+- Cost of sgmentation 
+* Usually a combination of these variables are used 
+* Remember the goal of segmentation! 
+* To conduct a proper segmentation you need data and research! 
