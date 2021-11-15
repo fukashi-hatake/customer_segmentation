@@ -136,12 +136,13 @@ _**Secondary Data (Research)**_
 - Details: Bought last 12 months 
 
 | Target | Total Sample | Weighted | Vertical  | Horizontal | Index     | 
+| ------ | ------------ | -------- | --------- | ---------- | --------- |  
 | Total  | 247,024 K    | 110,322 K| 100.00%   | 44.66%     | 100       | 
 | Male   | 119,259 K    | 43,406  K| 39.35%    | 36.40%     | 81      ⬇️| 
 | Female | 127,765 K    | 66,916  K| 60.65%    | 52.37%     | **117** ⬆️|
 
-Vertical (male) = Weighted(male) / Weighted(total) * 100 = 43,406K / 110,322K * 100 = **39.35** 
-Horizontal (male) = Weighted(male) / TotalSample(male) * 100 = 43,406K / 119,259K = **36.40**
-Index (male) = Horizontal(male) / Horizontal(total) * 100 = **81** 
+- Vertical (male) = Weighted(male) / Weighted(total) * 100 = 43,406K / 110,322K * 100 = **39.35** 
+- Horizontal (male) = Weighted(male) / TotalSample(male) * 100 = 43,406K / 119,259K = **36.40**
+- Index (male) = Horizontal(male) / Horizontal(total) * 100 = **81** 
 
 
