@@ -1,7 +1,7 @@
 ## Marketing Insights 
 by Firuz Juraev (Ph.D candidate)
 
-
+## Part 1: Course 1 
 ### Customer Segmentation 
 
 #### Segmentation 
@@ -146,3 +146,9 @@ _**Secondary Data (Research)**_
 - Index (male) = Horizontal(male) / Horizontal(total) * 100 = **81** 
 
 
+## Part 2: Course 2 
+* Instructor: Dana Mando 
+
+### How to create a customer journey map (CJM) - 13 steps 
+1. Define a clear opjective for the map 
+You need to be very clear on what your overall goal for the map is. Is it to identify problematic areas in your customer experience? You know that something wrong is happening and you want to pinpoint exactly where that is. Maybe you're noticing a significant decline in profits and you want to get to the bottom of it to be able to fix it and address it. Or perhaps your goal for this map is to identify a new customer group that you suspect can be a huge opportunity for your business.
