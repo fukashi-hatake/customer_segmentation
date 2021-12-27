@@ -149,6 +149,13 @@ _**Secondary Data (Research)**_
 ## Part 2: Course 2 
 * Instructor: Dana Mando 
 
+## Omnichannel CXM strategy 
+1. Know your customer 
+2. Implement consistency across channels 
+3. Technology in Integration & utilization 
+4. Address your organization's structure 
+5. Build strong relationships with your customers 
+
 ### How to create a customer journey map (CJM) - 13 steps 
 1. Define a clear opjective for the map 
 
@@ -159,4 +166,31 @@ You need to be very clear on what your overall goal for the map is. Is it to ide
 A key step in putting your map together is the research. Your research will give you the information you need to put your map together. **Don't base your map on assumptions.** 
 - Do quantative and qualitative data collection methods. 
 
-3. 
+3. Create the buyer persona
+4. List all the touch points 
+
+A touch point is basically any interaction that happens between a customer and a business. So touch points are basically points of interaction. So when a customer is on your website and talks to an employee through online chat, that's a touch point. When a customer reads a review about your company on Yelp dot com, that's also a touch point. It's basically any encounter the customer has with your business.
+
+- When listing out your touch points, it's very important that you view them from the customer's perspective and not from your own business's perspective. 
+
+So, for example, online could be a channel, but online chat is the touch point. A company's channels can include things such as billboards, the company's website, social media platforms, their mobile app and etc. But touch points go way beyond just your channels. 
+
+- Touch points also include things that are beyond your organization's control, and it's often these touch points that are beyond your parameters that have the biggest impact and should not be overlooked.
+
+- Ask yourself, how does the customer encounter or interact with the business and list out every single possible interaction from their perspective, not yours. 
+
+5. List your organization's channels
+
+Examples of common channels include a store, a website, customer service call centers, social media platforms, billboards and direct mail.  
+
+6. List the customer's behavioral stages & goals 
+
+##### Example of Customer Behavioral Stages (+Goal at each stage) 
+- Stage 1: Research (Goal: To have awareness of everything available) 
+- Stage 2: Compare Options (Goal: Find the best fit) 
+- Stage 3: Make a decision (Goal: Commit to one option) 
+- Stage 4: Use product (Goal: monitor & review)
+
+7. Identify pain points 
+
+You need to account for all the pain points your customer is facing. 
