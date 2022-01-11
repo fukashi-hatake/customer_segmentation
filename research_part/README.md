@@ -5,6 +5,8 @@ by Firuz Juraev
 ### Checking for outliers 
 1. Turkey outlier detector 
 
+<img src="images/turkey_outliers.png">  
+
 ```python
 def turkey_outlier_detector(df, cols=None):
     if cols  is None:
