@@ -35,3 +35,55 @@ def turkey_outlier_detector(df, cols=None):
         
     return outlier_indices 
 ``` 
+
+
+### Plotting data with PCA 
+
+##### Code 
+```python 
+from sklearn.decomposition import PCA 
+import matplotlib.pyplot as plt
+
+def pca_2d_plot(pca, df):
+    fig, ax = plt.subplots(figsize=(10,10))
+    transformed_data = pca.transform(df.values)
+    ax.scatter(transformed_data[:,0], transformed_data[:,1], s=3)
+    plt.show()
+ 
+pca = PCA(n_components=3) ## 3 number of features 
+pca.fit(df.values) 
+pca_2d_plot(pca, df) 
+```
+
+### Hopkins Statistic
+
+```python 
+def hopkins_statistic(df):
+    from sklearn.neighbors import NearestNeighbors
+    from sklearn.preprocessing import StandardScaler
+    n_samples = df.shape[0]
+    num_samples = [int(f*n_samples) for f in [0.25,0.5,0.75]]
+    states = [123,42,67,248,654]
+    for n in num_samples:
+        print('-'*12+str(n)+'-'*12)
+        hopkins_statistic = []
+        for random_state in states:
+            data = df.sample(n=n, random_state=random_state)
+            nbrs = NearestNeighbors(n_neighbors=2)
+            scaler = StandardScaler()
+            X = scaler.fit_transform(data.values)
+            nbrs.fit(X)
+            sample_dist = nbrs.kneighbors(X)[0][:,1]
+            sample_dist = np.sum(sample_dist)
+            random_data = np.random.rand(X.shape[0], X.shape[1])
+            nbrs.fit(random_data)
+            random_dist = nbrs.kneighbors(random_data)[0][:,1]
+            random_dist = np.sum(random_dist)
+            hs = sample_dist/(sample_dist+random_dist)
+            hopkins_statistic.append(hs)
+            print('*'*25)
+            print('hopkins statistic :'+str(hs))
+        print('mean hopkins statistic :'+str(np.mean(np.array(hopkins_statistic))))
+        print('hopkins statistic standard deviation :'+str(np.std(np.array(hopkins_statistic))))
+```
+
