@@ -95,8 +95,21 @@ def hopkins_statistic(df):
 * H=0.0 -> actual data are highly clustered 
 * H=1.0 -> actual data are regularly distributed in the data space (e.g grid) 
 
+### Features Correlations 
 
-### Clustering Techniques 
+It shows the correlation between features. 
+```python 
+fig,ax = plt.subplots(figsize=(8,4)) ## play with size 
+fig.suptitle("Title here", fontsize=30)
+corrcoef = df.corr()
+mask = np.array(corrcoef)
+mask[np.tril_indices_from(mask)] = False
+sns.heatmap(corrcoef, mask=mask, vmax=.8, annot=True, ax=ax)
+plt.show();
+``` 
+<img src="images/correlation_between_features.png">    
+
+## Clustering Techniques 
 1. Fuzzy C-Means Clustering 
 ```
 pip install fuzzy-c-means
@@ -127,3 +140,84 @@ plt.show()
 ```
 * Related Links: 
 https://pythonhosted.org/scikit-fuzzy/auto_examples/plot_cmeans.html 
+
+2. Hierarchical Clustering 
+
+```python 
+from sklearn.cluster import AgglomerativeClustering 
+
+clustering_model = AgglomerativeClustering(n_clusters=n)  
+clusters = clustering_model.fit_predict(X) 
+
+``` 
+
++ Plot Hierarchical Clustering Dendrogram 
+
+```python
+def plot_dendrogram(model, **kwargs):
+    # Create linkage matrix and then plot the dendrogram
+
+    # create the counts of samples under each node
+    counts = np.zeros(model.children_.shape[0])
+    n_samples = len(model.labels_)
+    for i, merge in enumerate(model.children_):
+        current_count = 0
+        for child_idx in merge:
+            if child_idx < n_samples:
+                current_count += 1  # leaf node
+            else:
+                current_count += counts[child_idx - n_samples]
+        counts[i] = current_count
+
+    linkage_matrix = np.column_stack(
+        [model.children_, model.distances_, counts]
+    ).astype(float)
+
+    # Plot the corresponding dendrogram
+    dendrogram(linkage_matrix, **kwargs)
+```
+
+```python 
+from sklearn.cluster import AgglomerativeClustering 
+from scipy.cluster.hierarchy import dendrogram 
+clustering_model = AgglomerativeClustering(distance_threshold=0, n_clusters=None)  ### if we want to create dendrogram, we cannot define number of clusters 
+clusters = clustering_model.fit_predict(X)  
+
+
+plt.title("Hierarchical Clustering Dendrogram")
+# plot the top five levels of the dendrogram
+plot_dendrogram(clustering_model, truncate_mode="level", p=5) ## calling the above funtion
+plt.xlabel("Number of points in node (or index of point if no parenthesis).")
+plt.show()
+
+```
+<img src="images/dendrogram.png">   
+
+### Metrics 
+
+```python 
+from sklearn.metrics import silhouette_score
+from sklearn.metrics import davies_bouldin_score  
+
+silhouette_score(X, labels)
+davies_bouldin_score(X, labels) 
+
+```
+#### Silhouette Coefficient
+Silhouette Coefficient or silhouette score is a metric used to calculate the goodness of a clustering technique. Its value ranges from -1 to 1.
+
+* 1: Means clusters are well apart from each other and clearly distinguished.
+* 0: Means clusters are indifferent, or we can say that the distance between clusters is not significant.
+* -1: Means clusters are assigned in the wrong way.
+
+<img src="images/Silhouette+Coefficient.jpg"> 
+
+Some sources: 
+
+* https://towardsdatascience.com/silhouette-coefficient-validating-clustering-techniques-e976bb81d10c 
+
+
+#### Davies-Bouldin score
+
+The score is defined as the average similarity measure of each cluster with its most similar cluster, where similarity is the ratio of within-cluster distances to between-cluster distances. Thus, clusters which are farther apart and less dispersed will result in a better score.
+
