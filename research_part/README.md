@@ -90,6 +90,7 @@ def hopkins_statistic(df):
 ```
 
 <img src="images/hopkins_statistics1.png">   
+
 * H=0.5 -> distances are similar 
 * H=0.0 -> actual data are highly clustered 
 * H=1.0 -> actual data are regularly distributed in the data space (e.g grid) 
