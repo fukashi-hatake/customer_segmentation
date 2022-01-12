@@ -1,6 +1,8 @@
 ## Customer Segmentation Research 
 by Firuz Juraev 
 
+#### Related papers: 
+
 
 ### Checking for outliers 
 1. Turkey outlier detector 
@@ -87,6 +89,11 @@ def hopkins_statistic(df):
         print('hopkins statistic standard deviation :'+str(np.std(np.array(hopkins_statistic))))
 ```
 
+<img src="images/hopkins_statistics1.png">   
+* H=0.5 -> distances are similar 
+* H=0.0 -> actual data are highly clustered 
+* H=1.0 -> actual data are regularly distributed in the data space (e.g grid) 
+
 
 ### Clustering Techniques 
 1. Fuzzy C-Means Clustering 
@@ -117,3 +124,5 @@ axes[1].scatter(fcm_centers[:,0], fcm_centers[:,1], marker="+", s=500, c='w')
 plt.savefig('images/basic-clustering-output.jpg')
 plt.show()
 ```
+* Related Links: 
+https://pythonhosted.org/scikit-fuzzy/auto_examples/plot_cmeans.html 
