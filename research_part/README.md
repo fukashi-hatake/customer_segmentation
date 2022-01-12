@@ -41,6 +41,21 @@ def turkey_outlier_detector(df, cols=None):
     return outlier_indices 
 ``` 
 
+#### Detecting outliers with plot 
+
+```python 
+fig = plt.figure(figsize=(16,12))
+sns.distplot(df['column']);
+plt.show()
+
+### with log 
+
+df['column'] = np.log(df['column'])
+fig = plt.figure(figsize=(16,12))
+sns.distplot(df['column']);
+plt.show()
+```
+
 ### Features Correlations 
 
 It shows the correlation between features. 
@@ -136,6 +151,53 @@ def hopkins_statistic(df):
 * H=0.5 -> distances are similar 
 * H=0.0 -> actual data are highly clustered 
 * H=1.0 -> actual data are regularly distributed in the data space (e.g grid)   
+
+
+### Selecting best number of clusters: k 
+
+1. Elbow method 
+
+```python 
+from scipy.spatial.distance import cdist 
+from sklearn.cluster import KMeans 
+
+distortions = []
+inertias = []
+mapping1 = {}
+mapping2 = {}
+K = range(1, 10)
+ 
+for k in K:
+    # Building and fitting the model
+    kmeanModel = KMeans(n_clusters=k).fit(X)
+    kmeanModel.fit(X)
+ 
+    distortions.append(sum(np.min(cdist(X, kmeanModel.cluster_centers_,
+                                        'euclidean'), axis=1)) / X.shape[0])
+    inertias.append(kmeanModel.inertia_)
+ 
+    mapping1[k] = sum(np.min(cdist(X, kmeanModel.cluster_centers_,
+                                   'euclidean'), axis=1)) / X.shape[0]
+    mapping2[k] = kmeanModel.inertia_
+    
+### with distortions 
+plt.plot(K, distortions, 'bx-')
+plt.xlabel('Values of K')
+plt.ylabel('Distortion')
+plt.title('The Elbow Method using Distortion')
+plt.show()
+
+### Using the different values of Inertia
+plt.plot(K, inertias, 'bx-')
+plt.xlabel('Values of K')
+plt.ylabel('Inertia')
+plt.title('The Elbow Method using Inertia')
+plt.show()
+
+```
+<img src="images/elbow_plots.png">   
+
+Link: https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/ 
 
 ## Clustering Techniques 
 1. Fuzzy C-Means Clustering 
