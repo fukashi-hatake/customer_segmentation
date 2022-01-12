@@ -7,7 +7,6 @@ by Firuz Juraev
 
 #### Related papers: 
 
-
 ### Checking for outliers 
 1. Turkey outlier detector 
 
@@ -42,6 +41,45 @@ def turkey_outlier_detector(df, cols=None):
     return outlier_indices 
 ``` 
 
+### Features Correlations 
+
+It shows the correlation between features. 
+```python 
+fig,ax = plt.subplots(figsize=(8,4)) ## play with size 
+fig.suptitle("Title here", fontsize=30)
+corrcoef = df.corr()
+mask = np.array(corrcoef)
+mask[np.tril_indices_from(mask)] = False
+sns.heatmap(corrcoef, mask=mask, vmax=.8, annot=True, ax=ax)
+plt.show();
+``` 
+<img src="images/correlation_between_features.png">   
+
+#### Dependant variables detection 
+
+```python 
+def dependant_variable_detector(df):
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.linear_model import LinearRegression
+    scaler = StandardScaler()
+    lr = LinearRegression()
+    columns = list(df.columns)
+    for col in columns:
+        y = scaler.fit_transform(df[col].values.reshape(-1,1))
+        X = scaler.fit_transform(df.drop(col, axis=1).values)
+        lr.fit(X,y)
+        print('Using '+col+' as dependent variable R2 score is :'+str(lr.score(X,y)))  
+``` 
+dependant_variable_detector(clientsDF) 
+
+```
+Using Recency as dependent variable R2 score is :0.14698126654287424
+Using Frequency as dependent variable R2 score is :0.8656755788525865
+Using Monetary as dependent variable R2 score is :0.862874153878725
+Using Language as dependent variable R2 score is :0.007583512995698594
+```
+
+##### Output 
 
 ### Plotting data with PCA 
 
@@ -97,21 +135,7 @@ def hopkins_statistic(df):
 
 * H=0.5 -> distances are similar 
 * H=0.0 -> actual data are highly clustered 
-* H=1.0 -> actual data are regularly distributed in the data space (e.g grid) 
-
-### Features Correlations 
-
-It shows the correlation between features. 
-```python 
-fig,ax = plt.subplots(figsize=(8,4)) ## play with size 
-fig.suptitle("Title here", fontsize=30)
-corrcoef = df.corr()
-mask = np.array(corrcoef)
-mask[np.tril_indices_from(mask)] = False
-sns.heatmap(corrcoef, mask=mask, vmax=.8, annot=True, ax=ax)
-plt.show();
-``` 
-<img src="images/correlation_between_features.png">    
+* H=1.0 -> actual data are regularly distributed in the data space (e.g grid)   
 
 ## Clustering Techniques 
 1. Fuzzy C-Means Clustering 
