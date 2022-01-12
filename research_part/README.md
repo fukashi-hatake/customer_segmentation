@@ -87,3 +87,33 @@ def hopkins_statistic(df):
         print('hopkins statistic standard deviation :'+str(np.std(np.array(hopkins_statistic))))
 ```
 
+
+### Clustering Techniques 
+1. Fuzzy C-Means Clustering 
+```
+pip install fuzzy-c-means
+```
+[Installation](https://pypi.org/project/fuzzy-c-means/)
+
+```python 
+import numpy as np
+from fcmeans import FCM
+from matplotlib import pyplot as plt
+
+## fitting the fuzzy-c-means 
+
+fcm = FCM(n_clusters=2)
+fcm.fit(X)
+
+# outputs
+fcm_centers = fcm.centers
+fcm_labels = fcm.predict(X)
+
+# plot result = showing results 
+f, axes = plt.subplots(1, 2, figsize=(11,5))
+axes[0].scatter(X[:,0], X[:,1], alpha=.1)
+axes[1].scatter(X[:,0], X[:,1], c=fcm_labels, alpha=.1)
+axes[1].scatter(fcm_centers[:,0], fcm_centers[:,1], marker="+", s=500, c='w')
+plt.savefig('images/basic-clustering-output.jpg')
+plt.show()
+```
