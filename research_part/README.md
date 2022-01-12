@@ -1,6 +1,10 @@
 ## Customer Segmentation Research 
 by Firuz Juraev 
 
+#### Figure 1: Framework of the paper
+
+<img src="images/segmentation_framework_v1.png">
+
 #### Related papers: 
 
 
