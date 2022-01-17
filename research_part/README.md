@@ -285,12 +285,16 @@ plt.show()
 
 ### Metrics 
 
+Generally, cluster validity measures are categorized into 3 classes (Internal cluster validation, External cluster validation and Relative cluster validation). 
+
 ```python 
 from sklearn.metrics import silhouette_score
 from sklearn.metrics import davies_bouldin_score  
+from sklearn.metrics import calinski_harabasz_score  
 
 silhouette_score(X, labels)
 davies_bouldin_score(X, labels) 
+calinski_harabasz_score(X, labels)
 
 ```
 #### Silhouette Coefficient
@@ -300,7 +304,7 @@ Silhouette Coefficient or silhouette score is a metric used to calculate the goo
 * 0: Means clusters are indifferent, or we can say that the distance between clusters is not significant.
 * -1: Means clusters are assigned in the wrong way.
 
-<img src="images/Silhouette+Coefficient.jpg"> 
+<img src="images/Silhouette+Coefficient.jpg" width="50%" height="50%"> 
 
 Some sources: 
 
@@ -310,4 +314,13 @@ Some sources:
 #### Davies-Bouldin score
 
 The score is defined as the average similarity measure of each cluster with its most similar cluster, where similarity is the ratio of within-cluster distances to between-cluster distances. Thus, clusters which are farther apart and less dispersed will result in a better score.
+
+https://www.geeksforgeeks.org/dunn-index-and-db-index-cluster-validity-indices-set-1/?ref=lbp 
+
+#### Calinski-Harabasz Index: 
+
+Calinski-Harabasz (CH) Index (introduced by Calinski and Harabasz in 1974) can be used to evaluate the model when ground truth labels are not known where the validation of how well the clustering has been done is made using quantities and features inherent to the dataset. The CH Index (also known as Variance ratio criterion) is a measure of how similar an object is to its own cluster (cohesion) compared to other clusters (separation). Here cohesion is estimated based on the distances from the data points in a cluster to its cluster centroid and separation is based on the distance of the cluster centroids from the global centroid. CH index has a form of (a . Separation)/(b . Cohesion) , where a and b are weights.  
+
+https://www.geeksforgeeks.org/calinski-harabasz-index-cluster-validity-indices-set-3/ 
+https://scikit-learn.org/stable/modules/clustering.html#calinski-harabasz-index 
 
