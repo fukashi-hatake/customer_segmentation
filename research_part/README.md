@@ -10,7 +10,7 @@ by Firuz Juraev
 ### Checking for outliers 
 1. Turkey outlier detector 
 
-<img src="images/turkey_outliers.png">  
+<img src="images/turkey_outliers.png" width="60%" height="60%">  
 
 ```python
 def turkey_outlier_detector(df, cols=None):
