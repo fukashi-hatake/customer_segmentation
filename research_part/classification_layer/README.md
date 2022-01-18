@@ -19,4 +19,4 @@ fig.update_traces(fill='toself')
 
 ```
 
-<img src="scatterplot_feature_importance.png" width="50%" height="50"> 
+<img src="scatterplot_feature_importance.png" width="50%" height="50%"> 
