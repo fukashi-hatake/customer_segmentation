@@ -220,6 +220,20 @@ plt.show()
 
 Link: https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/ 
 
+#### Elbow with Yellowbrick 
+
+```python 
+from yellowbrick.cluster import KElbowVisualizer 
+
+print('Elbow Method to determine the number of clusters to be formed:')
+Elbow_M = KElbowVisualizer(KMeans(), k=10)
+Elbow_M.fit(df)
+Elbow_M.show() 
+```
+
+<img src="images/yellowbrick_elbow.png" width="50%" height="50%">
+
+
 ## Clustering Techniques 
 1. Fuzzy C-Means Clustering 
 ```
