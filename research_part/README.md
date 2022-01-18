@@ -98,6 +98,8 @@ Using Language as dependent variable R2 score is :0.007583512995698594
 
 ### Plotting data with PCA 
 
+Principal component analysis (PCA) is a technique for reducing the dimensionality of such datasets, increasing interpretability but at the same time minimizing information loss. 
+
 ##### Code 
 ```python 
 from sklearn.decomposition import PCA 
@@ -112,6 +114,25 @@ def pca_2d_plot(pca, df):
 pca = PCA(n_components=3) ## 3 number of features 
 pca.fit(df.values) 
 pca_2d_plot(pca, df) 
+```
+
+#### 3D PCA 
+
+```python 
+pca = PCA(n_components=3) 
+pca.fit(df) 
+PCA_ds = pd.DataFrame(pca.transform(df), columns=(["col1","col2", "col3"])) 
+
+#A 3D Projection Of Data In The Reduced Dimension
+x =PCA_ds["col1"]
+y =PCA_ds["col2"]
+z =PCA_ds["col3"]
+#To plot
+fig = plt.figure(figsize=(10,8))
+ax = fig.add_subplot(111, projection="3d")
+ax.scatter(x,y,z, c="maroon", marker="o" )
+ax.set_title("A 3D Projection Of Data In The Reduced Dimension")
+plt.show()
 ```
 
 ### Hopkins Statistic
