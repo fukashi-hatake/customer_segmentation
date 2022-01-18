@@ -17,5 +17,6 @@ feat_importance_xgb_top_8 = feat_importance_xgb[:10] ### taking top 10 important
 fig = go.Figure(data=go.Scatterpolar(r=feat_importance_xgb_top_8.values, theta=feat_importance_xgb_top_8.index)) 
 fig.update_traces(fill='toself')  
 
-<img src="scatterplot_feature_importance.png" width="50%" height="50">
 ```
+
+<img src="scatterplot_feature_importance.png" width="50%" height="50"> 
