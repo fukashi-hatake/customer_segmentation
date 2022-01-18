@@ -345,6 +345,24 @@ Some sources:
 
 * https://towardsdatascience.com/silhouette-coefficient-validating-clustering-techniques-e976bb81d10c 
 
+#### Silhouette Visualizer 
+
+```python 
+from yellowbrick.cluster import SilhouetteVisualizer 
+
+model = KMeans(6, random_state=42)
+visualizer = SilhouetteVisualizer(model, colors='yellowbrick')
+
+visualizer.fit(clientsDF)        # Fit the data to the visualizer
+visualizer.show()                # Finalize and render the figure
+```
+<img src="images/silhouette_yellowbrick.png" width="50%" height="50%">  
+
+Run with admin 
+```console 
+pip install -U yellowbrick 
+```
+https://github.com/DistrictDataLabs/yellowbrick/tree/main 
 
 #### Davies-Bouldin score
 
