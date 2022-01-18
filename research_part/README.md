@@ -233,6 +233,11 @@ Elbow_M.show()
 
 <img src="images/yellowbrick_elbow.png" width="50%" height="50%">
 
+```python 
+visualizer = KElbowVisualizer(
+    model, k=(4,12), metric='calinski_harabasz', timings=False
+)
+``` 
 
 ## Clustering Techniques 
 1. Fuzzy C-Means Clustering 
@@ -318,6 +323,18 @@ plt.show()
 ```
 <img src="images/dendrogram.png">   
 
+3. MiniBatchKMeans 
+
+```python 
+from sklearn.cluster import MiniBatchKMeans 
+
+kmeans = MiniBatchKMeans(n_clusters=7)
+kmeans.fit(df)
+
+labels = kmeans.predict(df) 
+silhouette_score(df, labels)
+```
+
 ### Metrics 
 
 Generally, cluster validity measures are categorized into 3 classes (Internal cluster validation, External cluster validation and Relative cluster validation). 
@@ -384,3 +401,19 @@ The Dunn index (DI) (introduced by J. C. Dunn in 1974), a metric for evaluating 
 Higher the Dunn index value, better is the clustering. The number of clusters that maximizes Dunn index is taken as the optimal number of clusters k. It also has some drawbacks. As the number of clusters and dimensionality of the data increase, the computational cost also increases.
 
 Code: https://gist.github.com/douglasrizzo/cd7e792ff3a2dcaf27f6 
+
+
+### Intercluster Distance Maps
+
+```python 
+from sklearn.cluster import KMeans  
+from yellowbrick.cluster import InterclusterDistance 
+ 
+model = KMeans(6)
+visualizer = InterclusterDistance(model) 
+
+visualizer.fit(df)       # Fit the data to the visualizer
+visualizer.show()        # Finalize and render the figure 
+```
+
+<img src="images/distance_map_yellowbrick.png" width="50%" height="50%">
