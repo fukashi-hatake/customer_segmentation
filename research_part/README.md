@@ -1,6 +1,7 @@
 ## Customer Segmentation Research 
 by Firuz Juraev 
 
+[Clustering Techniques](https://www.analytixlabs.co.in/blog/types-of-clustering-algorithms/)
 #### Figure 1: Framework of the paper
 
 <img src="images/segmentation_framework_v1.png">
