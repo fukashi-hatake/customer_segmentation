@@ -219,4 +219,6 @@ Two types of churn:
 
 
 #### According to Harvard business school it is 5 to 25 times more expensive to get new customers than retaining the existing ones 
+* Think of churn as an opportunity 
+
 
