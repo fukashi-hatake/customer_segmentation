@@ -194,3 +194,18 @@ Examples of common channels include a store, a website, customer service call ce
 7. Identify pain points 
 
 You need to account for all the pain points your customer is facing. 
+
+
+## Part 3: Course 4 
+* Instructor: Gustavo Escobar Henríquez 
+
+Two types of churn: 
+1. Customer churn rate 
+2. Revenue churn rate  
+
+#### Is your churn rate fault as a cusotmer success manager? 
+1. Atracting the wrong customer 
+2. Terrible onboarding process 
+3. Not paying attention to your customers (only paying attention to new customers) 
+
+
