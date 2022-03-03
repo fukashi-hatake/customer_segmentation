@@ -215,4 +215,8 @@ Two types of churn:
 * Find the most important reasons for customer churn 
 
 - Customers will not cancel because of something they don't like 
-- <font color='purple'> Customers will cancel becuase they can't achieve their goal </font>
+- ![#f03c15] Customers will cancel becuase they can't achieve their goal
+
+
+#### According to Harvard business school it is 5 to 25 times more expensive to get new customers than retaining the existing ones 
+
