@@ -208,4 +208,11 @@ Two types of churn:
 2. Terrible onboarding process 
 3. Not paying attention to your customers (only paying attention to new customers) 
 
+#### There is a journey your customers go through 
+* You can understand role mapping 
 
+#### Focus on what matter must as a customer success manager 
+* Find the most important reasons for customer churn 
+
+- Customers will not cancel because of something they don't like 
+- <font color='purple'> Customers will cancel becuase they can't achieve their goal </font>
