@@ -10,7 +10,7 @@ by Firuz Juraev (Ph.D candidate)
 - People in each group should show a great deal of homogeneity in their behavior 
 - 
 #### Examples: 
-<img src="airline_segments.png"> 
+<img src="airline_segments.png" width="50%" height="50%"> 
 
 #### Coca Cola 
 - Coca Cola company created multiple brands for different market segments. If company sells only coca cola, in future they may loose many market segments to opponent companies. 
