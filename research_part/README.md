@@ -405,7 +405,7 @@ Code: https://gist.github.com/douglasrizzo/cd7e792ff3a2dcaf27f6
 
 
 #### Cohesion Score 
-
+implemented by Firuz 
 ```python  
 def calculate_dist_centroid(x, centroids):
     dist = 0 
@@ -429,6 +429,8 @@ def cohesion(df):
         centroids = centroids.append(centroid_dict, ignore_index=True) 
     
     df['dist_centroid'] = df.apply(lambda x: calculate_dist_centroid(x, centroids), axis=1) 
+    
+    cohesion_score = 0 
     
     for K in range(0, n_clusters): 
         cohesion_score += sqrt(data[data.cluster == K].dist_centroid.sum()) 
