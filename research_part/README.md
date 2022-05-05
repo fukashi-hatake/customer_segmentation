@@ -433,9 +433,11 @@ def cohesion(df):
     cohesion_score = 0 
     
     for K in range(0, n_clusters): 
-        cohesion_score += sqrt(data[data.cluster == K].dist_centroid.sum()) 
-          
-    return cohesion_score 
+        cohesion_score += (df[df.cluster == K].dist_centroid.sum())
+        
+    cohesion_score = cohesion_score/(df.shape[0] - n_clusters) 
+    
+    return cohesion_score  
 
 ```
 
