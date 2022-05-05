@@ -404,6 +404,39 @@ Higher the Dunn index value, better is the clustering. The number of clusters th
 Code: https://gist.github.com/douglasrizzo/cd7e792ff3a2dcaf27f6 
 
 
+#### Cohesion Score 
+
+```python  
+def calculate_dist_centroid(x, centroids):
+    dist = 0 
+    for col in centroids.drop(['cluster'], axis=1).columns: 
+        dist += (x[col] - centroids[centroids.cluster == x.cluster][col].to_numpy(dtype="float64"))**2  
+    
+    return dist[0]
+
+
+def cohesion(df): 
+    n_clusters = df.cluster.nunique() 
+    columns = df.drop(['cluster'], axis=1).columns 
+    
+    centroids = pd.DataFrame() 
+    centroid_dict = {}
+    for K in range(0, n_clusters): 
+        centroid_dict['cluster'] = K  
+        for col in columns: 
+            centroid_dict[col] = df[df.cluster == K][col].mean() 
+        
+        centroids = centroids.append(centroid_dict, ignore_index=True) 
+    
+    df['dist_centroid'] = df.apply(lambda x: calculate_dist_centroid(x, centroids), axis=1) 
+    
+    for K in range(0, n_clusters): 
+        cohesion_score += sqrt(data[data.cluster == K].dist_centroid.sum()) 
+          
+    return cohesion_score 
+
+```
+
 ### Intercluster Distance Maps
 
 ```python 
